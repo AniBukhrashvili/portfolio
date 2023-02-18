@@ -117,7 +117,7 @@ img {
 .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .section__title,
@@ -133,7 +133,6 @@ img {
 
 .grid {
     display: grid;
-    gap: 1.5rem;
 }
 
 
@@ -187,9 +186,6 @@ img {
     }
     .section {
         padding: 2rem 0 4rem;
-    }
-    .section__subtitle {
-        margin-bottom: var(--mb-3);
     }
 }
 
