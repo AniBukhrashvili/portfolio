@@ -16,7 +16,7 @@ const About = () => {
           <p className="about__description">
             Hello, my name is Ani, I am a 19 years old highly organised,
             hard-working, motivated, creative{" "}
-            <span className="framework">FrontEnd Developer</span> and
+            <span className="framework">Frontend Developer</span> and
             Information Technology student with a huge thirst for knowledge and
             self-improvement. I can create user interfaces with comprehensive
             knowledge. This process is quite interesting and fascinating for me.
