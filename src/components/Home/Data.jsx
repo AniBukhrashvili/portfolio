@@ -55,8 +55,8 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Frontend Developer</h3>
       <p className="home__description">
-        I enjoy building and designing for web. I'm very passionate and
-        dedicated to my work.
+        Creating and designing for the web brings me immense pleasure. I'm very
+        passionate and dedicated to my work.
       </p>
       <a href="#contact" className="button button--flex">
         Contact Me

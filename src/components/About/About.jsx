@@ -14,17 +14,20 @@ const About = () => {
         <Info />
         <div className="about__data">
           <p className="about__description">
-            Hello, my name is Ani, I am a 19 years old highly organised,
-            hard-working, motivated, creative{" "}
-            <span className="framework">Frontend Developer</span> and
-            Information Technology student with a huge thirst for knowledge and
-            self-improvement. I can create user interfaces with comprehensive
-            knowledge. This process is quite interesting and fascinating for me.
-            I have valuable knowledge and hands-on experience with JavaScript
-            powerful library - <span className="framework">REACT</span>. I'm
-            eager to use my skills and continue to grow as a developer. I have
-            created many projects, I also have the experience of working on a
-            real project. I hope that you enjoy projects I’ve created.
+            Hello, my name is Ani, and I am a highly organized, hardworking, and
+            motivated <span className="framework">Frontend Developer</span> and
+            Information Technology student, with a thirst for knowledge and
+            self-improvement. I possess comprehensive knowledge in creating user
+            interfaces, which I find to be an interesting process. I have
+            valuable hands-on experience with{" "}
+            <span className="framework">REACT</span>, a powerful JavaScript
+            library, which enables me to develop interactive and responsive web
+            applications. As a developer, I am always eager to use my skills and
+            continue to grow in my field. I have already created many projects
+            and even had the opportunity to work on a real-life project, which
+            has expanded my practical experience. I am confident that you will
+            enjoy the applications I have created and hope to have the
+            opportunity to collaborate with you in the future.
           </p>
           <a download="" href={CV} className="button button--flex">
             Download CV
