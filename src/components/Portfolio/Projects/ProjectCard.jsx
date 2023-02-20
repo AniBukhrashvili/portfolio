@@ -35,7 +35,7 @@ function ProjectCard({ item }) {
           </div>
 
           <div className="link__buttons">
-            <a href={item.githubLink}>View code</a>
+            <a href={item.githubLink}>View Code</a>
             <a href={item.livePreview}>Live Preview</a>
           </div>
         </div>
