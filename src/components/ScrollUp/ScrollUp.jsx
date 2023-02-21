@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./ScrollUp.css";
 
-const ScrollUp = () => {
+const ScrollUp = ({ handleScrollUp }) => {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const ScrollUp = () => {
   return (
     <>
       {showScroll && (
-        <a href="#" className="scrollup">
+        <a href="#" className="scrollup" onClick={handleScrollUp}>
           <i className="uil uil-arrow-up scrollup__icon"></i>
         </a>
       )}
