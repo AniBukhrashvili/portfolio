@@ -24,7 +24,7 @@ const ScrollUp = ({ handleScrollUp }) => {
   return (
     <>
       {showScroll && (
-        <a href="#" className="scrollup" onClick={handleScrollUp}>
+        <a href="#home" className="scrollup" onClick={handleScrollUp}>
           <i className="uil uil-arrow-up scrollup__icon"></i>
         </a>
       )}

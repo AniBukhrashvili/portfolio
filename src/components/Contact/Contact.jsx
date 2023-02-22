@@ -1,12 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import "./Contact.css";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const initialFormState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(
@@ -15,7 +24,9 @@ const Contact = () => {
       form.current,
       "NaCrGdvRusGszluMl"
     );
-    e.target.reset();
+    setName(initialFormState.name);
+    setEmail(initialFormState.email);
+    setMessage(initialFormState.message);
   };
 
   return (
@@ -72,14 +83,17 @@ const Contact = () => {
         </div>
 
         <div className="contact__content">
-          <form ref={form} onSubmit={sendEmail} className="contact__form">
+          <form ref={form} onSubmit={handleSubmit} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
                 type="text"
                 name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="contact__form-input"
                 placeholder="Enter Your Name"
+                required
               />
             </div>
 
@@ -88,8 +102,11 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="contact__form-input"
                 placeholder="Enter Your Email"
+                required
               />
             </div>
 
@@ -99,12 +116,15 @@ const Contact = () => {
                 name="message"
                 cols="30"
                 rows="10"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="contact__form-input"
                 placeholder="Enter Your Message"
+                required
               ></textarea>
             </div>
 
-            <button className="button button--flex">
+            <button className="button button--flex" type="submit">
               Message Me
               <svg
                 class="button__icon"
