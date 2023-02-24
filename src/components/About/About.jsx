@@ -15,11 +15,11 @@ const About = () => {
         <div className="about__data">
           <p className="about__description">
             Hello, my name is Ani, and I am a highly organized, hardworking, and
-            motivated <span className="framework">Frontend Developer</span> and
-            Information Technology student, with a thirst for knowledge and
-            self-improvement. I possess comprehensive knowledge in creating user
-            interfaces, which I find to be an interesting process. I have
-            valuable hands-on experience with{" "}
+            motivated <span className="framework">Frontend Developer</span> and{" "}
+            <span className="framework">Information Technology student</span>,
+            with a thirst for knowledge and self-improvement. I possess
+            comprehensive knowledge in creating user interfaces, which I find to
+            be an interesting process. I have valuable hands-on experience with{" "}
             <span className="framework">REACT</span>, a powerful JavaScript
             library, which enables me to develop interactive and responsive web
             applications. As a developer, I am always eager to use my skills and
