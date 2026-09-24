@@ -1,19 +1,20 @@
 import { useMemo } from "react";
 
-const DOT_COUNT = 60;
+const DOT_COUNT = 50;
 
 function createDots() {
   return Array.from({ length: DOT_COUNT }, (_, id) => {
-    const travel = 3 + Math.random() * 4;
+    const distance = 16 + Math.random() * 20;
+    const angle = Math.random() * Math.PI * 2;
 
     return {
       id,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      duration: `${20 + Math.random() * 16}s`,
-      delay: `${-Math.random() * 20}s`,
-      tx: `${(Math.random() - 0.5) * travel}px`,
-      ty: `${(Math.random() - 0.5) * travel}px`,
+      duration: `${2.5 + Math.random() * 2.5}s`,
+      delay: `${-Math.random() * 4}s`,
+      tx: `${Math.cos(angle) * distance}px`,
+      ty: `${Math.sin(angle) * distance}px`,
     };
   });
 }
@@ -29,7 +30,7 @@ function BackgroundDots() {
       {dots.map((dot) => (
         <span
           key={dot.id}
-          className="absolute h-[2px] w-[2px] rounded-full bg-white/25 animate-dot"
+          className="bg-dot absolute h-[2px] w-[2px] rounded-full bg-white/40"
           style={{
             left: dot.left,
             top: dot.top,

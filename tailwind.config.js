@@ -2,18 +2,27 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
+    container: {
+      center: true,
+      padding: '1.5rem',
+      screens: {
+        sm: '72rem',
+        md: '72rem',
+        lg: '72rem',
+        xl: '72rem',
+        '2xl': '72rem',
+      },
+    },
     extend: {
       colors: {
         page: 'hsl(0 0% 13%)',
+        accent: '#e8b86d',
       },
-      animation: {
-        dot: 'drift var(--duration) ease-in-out infinite',
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'sans-serif'],
       },
-      keyframes: {
-        drift: {
-          '0%, 100%': { transform: 'translate3d(0, 0, 0)' },
-          '50%': { transform: 'translate3d(var(--tx), var(--ty), 0)' },
-        },
+      maxWidth: {
+        '9xl': '96rem',
       },
     },
   },
