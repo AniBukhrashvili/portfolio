@@ -1,28 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     container: {
       center: true,
-      padding: '1.5rem',
+      padding: "1.5rem",
       screens: {
-        sm: '72rem',
-        md: '72rem',
-        lg: '72rem',
-        xl: '72rem',
-        '2xl': '72rem',
+        sm: "72rem",
+        md: "72rem",
+        lg: "72rem",
+        xl: "82rem",
+        "2xl": "82rem",
       },
     },
     extend: {
       colors: {
-        page: 'hsl(0 0% 13%)',
-        accent: '#e8b86d',
+        page: "hsl(0 0% 13%)",
+        accent: "#8DA3C7",
       },
       fontFamily: {
-        sans: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['"Space Grotesk"', "sans-serif"],
       },
       maxWidth: {
-        '9xl': '96rem',
+        "9xl": "96rem",
       },
     },
   },

@@ -17,10 +17,17 @@ const socials = [
     icon: (
       <svg
         viewBox="0 0 24 24"
-        className="h-5 w-5 fill-current"
-        aria-hidden="true"
+        width="24"
+        height="24"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.8 2.6 4.8 6V24h-4v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4v7.8h-4V8.5z" />
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
       </svg>
     ),
   },
@@ -30,10 +37,34 @@ const socials = [
     icon: (
       <svg
         viewBox="0 0 24 24"
-        className="h-5 w-5 fill-current"
-        aria-hidden="true"
+        width="24"
+        height="24"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" />
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+      </svg>
+    ),
+  },
+  {
+    label: "Email",
+    href: "mailto:bukhrashviliiani@gmail.com",
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
       </svg>
     ),
   },
@@ -126,13 +157,17 @@ function Header() {
         </ul>
 
         <div className="mt-auto border-t border-white/10 py-6">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6 justify-center">
             {socials.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
-                target="_blank"
-                rel="noreferrer"
+                target={
+                  social.href.startsWith("mailto:") ? undefined : "_blank"
+                }
+                rel={
+                  social.href.startsWith("mailto:") ? undefined : "noreferrer"
+                }
                 aria-label={social.label}
                 className="text-white/60 transition-colors hover:text-accent"
               >
@@ -140,12 +175,6 @@ function Header() {
               </a>
             ))}
           </div>
-          <a
-            href="mailto:bukhrashviliiani@gmail.com"
-            className="mt-4 block text-sm font-medium text-white/60 transition-colors hover:text-accent"
-          >
-            bukhrashviliiani@gmail.com
-          </a>
         </div>
       </nav>
     </>

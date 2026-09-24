@@ -26,15 +26,18 @@ function Hero() {
           📍 Tbilisi, Georgia
         </p>
         <a
-          href="#contact"
-          className="mt-8 inline-flex w-fit items-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-page transition-opacity hover:opacity-90"
+          href="#about"
+          className="mt-8 inline-flex w-fit items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/55 transition-colors hover:text-accent"
         >
-          Let&apos;s Talk
+          <span className="scroll-nudge flex h-8 w-5 items-start justify-center rounded-full border border-white/30 p-1 mb-1.5">
+            <span className="h-1.5 w-1 rounded-full bg-accent" />
+          </span>
+          Scroll to explore
         </a>
-        <p className="mt-4 flex items-center gap-2 text-sm font-medium text-white/55">
+        {/* <p className="mt-4 flex items-center gap-2 text-sm font-medium text-white/55">
           <span className="h-2 w-2 rounded-full bg-accent" />
           Available for new opportunities
-        </p>
+        </p> */}
       </div>
 
       <ul className="z-20 mt-10 flex flex-wrap gap-8 px-6 pb-10 md:absolute md:bottom-8 md:right-12 md:mt-0 md:flex-col md:items-end md:gap-6 md:px-0 md:pb-0">
