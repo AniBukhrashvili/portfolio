@@ -1,9 +1,10 @@
-import './App.css';
+import BackgroundDots from "./components/BackgroundDots";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ani Bukhrashvili</h1>
+    <div className="relative min-h-screen overflow-hidden bg-page text-white">
+      <BackgroundDots />
+      <main className="relative z-10" />
     </div>
   );
 }
