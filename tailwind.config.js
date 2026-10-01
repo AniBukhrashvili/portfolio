@@ -15,7 +15,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        page: "#0A0A0A",
+        page: "rgb(var(--page) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
         accent: "#8DA3C7",
       },
       fontFamily: {

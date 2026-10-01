@@ -30,7 +30,7 @@ function BackgroundDots() {
       {dots.map((dot) => (
         <span
           key={dot.id}
-          className="bg-dot absolute h-[3px] w-[3px] rounded-full bg-white/30"
+          className="bg-dot absolute h-[3px] w-[3px] rounded-full bg-ink/30"
           style={{
             left: dot.left,
             top: dot.top,
