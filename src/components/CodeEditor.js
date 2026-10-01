@@ -1,45 +1,46 @@
 function CodeEditor() {
   return (
     <div className="flex h-full flex-col justify-between rounded-2xl border border-ink/10 bg-ink/5 p-3">
-      <div className="overflow-hidden rounded-lg border border-white/10 bg-[#1c1c1e]">
-        <div className="flex items-center gap-1.5 border-b border-white/10 px-3 py-2">
+      <div className="overflow-hidden rounded-lg border border-ink/10 bg-[var(--code-bg)]">
+        <div className="flex items-center gap-1.5 border-b border-ink/10 px-3 py-2">
           <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
           <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
           <span className="h-2 w-2 rounded-full bg-[#28c840]" />
-          <span className="ml-2 font-mono text-[10px] text-white/40">
+          <span className="ml-2 font-mono text-[10px] text-ink/40">
             page.tsx
           </span>
         </div>
-        <pre className="whitespace-pre-wrap px-3 py-2.5 font-mono text-[10px] leading-4 text-white/75">
-          <span className="text-[#c586c0]">import</span> Image{" "}
-          <span className="text-[#c586c0]">from</span>{" "}
-          <span className="text-[#ce9178]">&quot;next/image&quot;</span>
+        <pre className="whitespace-pre-wrap px-3 py-2.5 font-mono text-[10px] leading-4 text-ink/75">
+          <span className="text-[var(--code-kw)]">import</span> Image{" "}
+          <span className="text-[var(--code-kw)]">from</span>{" "}
+          <span className="text-[var(--code-str)]">&quot;next/image&quot;</span>
           {"\n\n"}
-          <span className="text-[#c586c0]">export default function</span>{" "}
-          <span className="text-[#dcdcaa]">Card</span>() {"{"}
+          <span className="text-[var(--code-kw)]">
+            export default function
+          </span>{" "}
+          <span className="text-[var(--code-fn)]">Card</span>() {"{"}
           {"\n"}
           {"  "}
-          <span className="text-[#c586c0]">return</span> (
-          {"\n"}
+          <span className="text-[var(--code-kw)]">return</span> ({"\n"}
           {"    "}
-          <span className="text-[#4ec9b0]">&lt;&gt;</span>
+          <span className="text-[var(--code-tag)]">&lt;&gt;</span>
           {"\n"}
           {"      "}
-          <span className="text-[#4ec9b0]">&lt;h1&gt;</span>
+          <span className="text-[var(--code-tag)]">&lt;h1&gt;</span>
           {"\n"}
           {"        "}I&apos;m Ani, Frontend Developer
           {"\n"}
           {"      "}
-          <span className="text-[#4ec9b0]">&lt;/h1&gt;</span>
+          <span className="text-[var(--code-tag)]">&lt;/h1&gt;</span>
           {"\n"}
           {"      "}
-          <span className="text-[#4ec9b0]">&lt;Image</span>{" "}
-          <span className="text-[#9cdcfe]">alt</span>=
-          <span className="text-[#ce9178]">&quot;avatar&quot;</span>{" "}
-          <span className="text-[#4ec9b0]">/&gt;</span>
+          <span className="text-[var(--code-tag)]">&lt;Image</span>{" "}
+          <span className="text-[var(--code-attr)]">alt</span>=
+          <span className="text-[var(--code-str)]">&quot;avatar&quot;</span>{" "}
+          <span className="text-[var(--code-tag)]">/&gt;</span>
           {"\n"}
           {"    "}
-          <span className="text-[#4ec9b0]">&lt;/&gt;</span>
+          <span className="text-[var(--code-tag)]">&lt;/&gt;</span>
           {"\n"}
           {"  "});
           {"\n"}

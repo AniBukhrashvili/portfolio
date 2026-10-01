@@ -5,11 +5,23 @@
 :root {
   --page: 10 10 10;
   --ink: 255 255 255;
+  --code-bg: #1c1c1e;
+  --code-kw: #c586c0;
+  --code-str: #ce9178;
+  --code-fn: #dcdcaa;
+  --code-tag: #4ec9b0;
+  --code-attr: #9cdcfe;
 }
 
 html[data-theme="light"] {
   --page: 255 255 255;
   --ink: 10 10 10;
+  --code-bg: #ffffff;
+  --code-kw: #af00db;
+  --code-str: #a31515;
+  --code-fn: #795e26;
+  --code-tag: #267f99;
+  --code-attr: #001080;
 }
 
 @layer base {
@@ -122,7 +134,6 @@ html[data-theme="light"] {
 .scroll-nudge {
   animation: scroll-nudge 1.6s ease-in-out infinite;
 }
-
 
 @keyframes logo-marquee {
   from {

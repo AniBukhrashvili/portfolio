@@ -85,11 +85,11 @@ function Header() {
     <header className="container sticky top-0 z-40 bg-page/80 backdrop-blur-md">
       <div className="flex items-center justify-between py-3.5">
         <a href="#home" className="shrink-0" onClick={close}>
-         {/* TODO: Add logo */}
+          {/* TODO: Add logo */}
         </a>
 
         <nav aria-label="Primary" className="hidden md:block">
-          <ul className="flex items-center gap-5">
+          <ul className="flex items-center gap-7">
             {links.map((link) => (
               <li key={link.href}>
                 <NavLink href={link.href} label={link.label} />

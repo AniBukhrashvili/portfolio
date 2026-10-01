@@ -10,7 +10,6 @@ module.exports = {
         md: "72rem",
         lg: "72rem",
         xl: "82rem",
-        "2xl": "82rem",
       },
     },
     extend: {

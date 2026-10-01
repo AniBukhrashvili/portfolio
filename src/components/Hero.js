@@ -39,7 +39,6 @@ const stack = [
   { name: "PixiJS" },
 ];
 
-
 function StackMarquee() {
   return (
     <div className="group flex h-full min-h-20 items-center overflow-hidden rounded-2xl border border-ink/10 bg-ink/5 [mask-image:linear-gradient(to_right,transparent,black_12%,black_90%,transparent)]">
@@ -72,11 +71,7 @@ function SlotCard() {
         {/* {reels.map((reel) => (
           <SlotReel key={reel.duration} duration={reel.duration} delay={reel.delay} />
         ))} */}
-        slot reel
-        slot reel
-        slot reel
-        slot reel
-        slot
+        slot reel slot reel slot reel slot reel slot
       </div>
       <p className="mt-2 text-[11px] font-medium text-ink/55">
         <span className="text-accent">PixiJS</span>
@@ -90,8 +85,11 @@ function Hero() {
     <section id="home" className="relative">
       <div className="container grid items-center py-9 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 xl:gap-20 lg:py-18 xl:py-20">
         <div className="min-w-0">
-          <p className="text-4xl font-medium text-ink/70 italic">
-          <span className="wave" aria-hidden="true">👋</span>Hi, I'm
+          <p className="text-4xl font-medium">
+            <span className="wave" aria-hidden="true">
+              👋
+            </span>
+            <span className="italic text-ink/70"> Hi, I'm</span>
           </p>
 
           <h1 className="mt-3 font-bold uppercase leading-[0.85] tracking-tight text-5xl lg:text-6xl">
@@ -103,14 +101,18 @@ function Hero() {
           </div>
 
           <p className="mt-6 max-w-lg text-base font-medium leading-7 text-ink/70">
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-            <br/><br/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-            <br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-
-            </p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            <br />
+            <br />
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+            <br />
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-ink/80">
             {links.map((link) => (
