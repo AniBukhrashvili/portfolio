@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        page: "hsl(0 0% 13%)",
+        page: "#0A0A0A",
         accent: "#8DA3C7",
       },
       fontFamily: {

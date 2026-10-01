@@ -1,7 +1,5 @@
 import BackgroundDots from "./components/BackgroundDots";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ScrollIndicator from "./components/ScrollIndicator";
 
 function App() {
   return (
@@ -9,9 +7,7 @@ function App() {
       <BackgroundDots />
       <div className="relative z-10">
         <Header />
-        <ScrollIndicator />
         <main>
-          <Hero />
           <div className="container">test</div>
           <div className="container">test</div>
           <div className="container">test</div>
