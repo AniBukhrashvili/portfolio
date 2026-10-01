@@ -30,6 +30,7 @@ function ArrowUpRight({ className = "h-3.5 w-3.5" }) {
   );
 }
 
+// TODO: Add stack
 const stack = [
   { name: "React" },
   { name: "Next.js" },
@@ -64,6 +65,7 @@ function StackMarquee() {
   );
 }
 
+// TODO: Add slot card
 function SlotCard() {
   return (
     <div className="flex h-full flex-col justify-between rounded-2xl border border-ink/10 bg-ink/5 p-3">
@@ -97,7 +99,10 @@ function Hero() {
           </h1>
 
           <div className="mt-7 flex flex-col gap-2 text-base font-medium text-accent sm:flex-row sm:items-center sm:gap-4">
-            <span>Frontend Developer</span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="exp-pulse h-1.5 w-1.5 rounded-full bg-accent" />
+              Frontend Developer
+            </span>
           </div>
 
           <p className="mt-6 max-w-lg text-base font-medium leading-7 text-ink/70">
@@ -136,7 +141,7 @@ function Hero() {
           </div>
 
           <a
-            href="#about"
+            href="#experience"
             className="mt-8 inline-flex w-fit max-w-full items-center gap-3 text-sm font-medium uppercase tracking-[0.1em] text-ink/55 hover:text-accent"
           >
             <span className="scroll-nudge mb-1.5 flex h-6 w-4 items-start justify-center rounded-full border border-ink/30 p-1">

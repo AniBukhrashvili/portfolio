@@ -1,4 +1,5 @@
 import BackgroundDots from "./components/BackgroundDots";
+import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <Experience />
         </main>
       </div>
     </div>
