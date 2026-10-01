@@ -88,7 +88,7 @@ function SlotCard() {
 function Hero() {
   return (
     <section id="home" className="relative">
-      <div className="container grid items-center py-16 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 xl:gap-20 lg:py-28">
+      <div className="container grid items-center py-9 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 xl:gap-20 lg:py-18 xl:py-20">
         <div className="min-w-0">
           <p className="text-4xl font-medium text-ink/70 italic">
           <span className="wave" aria-hidden="true">👋</span>Hi, I'm
@@ -170,7 +170,7 @@ function Hero() {
               href="#projects"
               className="flex h-full min-h-20 flex-col justify-end rounded-2xl border border-ink/10 bg-ink/5 p-5 text-ink transition-colors hover:text-accent"
             >
-              <span className="inline-flex items-center gap-2 text-lg font-semibold leading-tight">
+              <span className="inline-flex items-center gap-2 text-xl font-semibold leading-tight">
                 Projects
                 <ArrowUpRight className="h-5 w-5" />
               </span>

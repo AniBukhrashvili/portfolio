@@ -82,7 +82,7 @@ function Header() {
   const close = () => setOpen(false);
 
   return (
-    <header className="container sticky top-0 z-40 border-b border-ink/10 bg-page/80 backdrop-blur-md">
+    <header className="container sticky top-0 z-40 bg-page/80 backdrop-blur-md">
       <div className="flex items-center justify-between py-3.5">
         <a href="#home" className="shrink-0" onClick={close}>
          {/* TODO: Add logo */}
