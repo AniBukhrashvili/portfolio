@@ -122,3 +122,27 @@ html[data-theme="light"] {
 .scroll-nudge {
   animation: scroll-nudge 1.6s ease-in-out infinite;
 }
+
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee {
+  animation: logo-marquee 20s linear infinite;
+}
+
+.group:hover .logo-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    animation: none;
+  }
+}

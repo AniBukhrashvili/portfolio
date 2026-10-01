@@ -1,5 +1,6 @@
 import BackgroundDots from "./components/BackgroundDots";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -8,18 +9,7 @@ function App() {
       <div className="relative z-10">
         <Header />
         <main>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
-          <div className="container">test</div>
+          <Hero />
         </main>
       </div>
     </div>
