@@ -1,4 +1,5 @@
 import CodeEditor from "./CodeEditor";
+import DinoGame from "./DinoGame";
 
 const links = [
   {
@@ -144,13 +145,8 @@ function Hero() {
         </div>
 
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-12">
-          <li className="flex min-h-28 flex-col justify-end rounded-2xl border border-ink/10 bg-ink/5 p-5 sm:col-span-12">
-            <p className="text-2xl font-semibold text-ink sm:text-3xl">
-              Open to work
-            </p>
-            <p className="mt-2 text-sm font-normal text-ink/55">
-              Available for new opportunities
-            </p>
+          <li className="overflow-hidden rounded-2xl border border-ink/10 bg-ink/5 sm:col-span-12">
+            <DinoGame />
           </li>
 
           <li className="sm:col-span-5">
