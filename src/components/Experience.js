@@ -75,13 +75,9 @@ function Experience() {
       <div className="container py-12 xl:py-18">
         <div className="flex gap-4 items-center justify-between">
           <div>
-            <h2 className="text-xl font-medium tracking-medium text-ink">
+            <h2 className="text-xl font-light tracking-medium text-ink">
               Experience
             </h2>
-            <span
-              aria-hidden="true"
-              className="mt-2 block h-px w-8 bg-accent"
-            />
           </div>
           <a
             href="/resume.pdf"
@@ -124,13 +120,13 @@ function Experience() {
                     </p>
                   </div>
 
-                  <p className="text-base font-medium text-ink/50">
+                  <p className="text-base font-light text-ink/50">
                     {job.company}
                     <span className="mx-1.5 text-ink/25">·</span>
                     {job.location}
                   </p>
 
-                  <p className="mt-2 max-w-4xl text-base font-medium text-ink">
+                  <p className="mt-2 max-w-4xl text-base font-light text-ink">
                     {job.summary}
                   </p>
                 </div>

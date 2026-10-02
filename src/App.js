@@ -2,6 +2,7 @@ import BackgroundDots from "./components/BackgroundDots";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import SectionSeparation from "./components/SectionSeparation";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <SectionSeparation />
           <Experience />
+          <SectionSeparation />
         </main>
       </div>
     </div>

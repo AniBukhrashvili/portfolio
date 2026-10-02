@@ -87,14 +87,14 @@ function Hero() {
     <section id="home" className="relative">
       <div className="container grid items-center py-9 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 xl:gap-20 lg:py-18 xl:py-20">
         <div className="min-w-0">
-          <p className="text-4xl font-medium">
+          <p className="text-3xl sm:text-4xl font-medium">
             <span className="wave" aria-hidden="true">
               👋
             </span>
             <span className="italic text-ink/70"> Hi, I'm</span>
           </p>
 
-          <h1 className="mt-3 font-bold uppercase leading-[0.85] tracking-tight text-5xl lg:text-6xl">
+          <h1 className="mt-3 font-bold uppercase leading-[0.85] tracking-tight text-4xl sm:text-5xl lg:text-6xl">
             <span className="block text-ink">Ani Bukhrashvili</span>
           </h1>
 
@@ -133,6 +133,15 @@ function Hero() {
               </a>
             ))}
             <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-accent"
+            >
+              Resume
+              <ArrowUpRight />
+            </a>
+            <a
               href="mailto:bukhrashviliiani@gmail.com"
               className="hover:text-accent"
             >
@@ -142,7 +151,7 @@ function Hero() {
 
           <a
             href="#experience"
-            className="mt-8 inline-flex w-fit max-w-full items-center gap-3 text-sm font-medium uppercase tracking-[0.1em] text-ink/55 hover:text-accent"
+            className="mt-9 inline-flex w-fit max-w-full items-center gap-2 text-xs font-medium uppercase tracking-[0.1em] text-ink/55 hover:text-accent"
           >
             <span className="scroll-nudge mb-1.5 flex h-6 w-4 items-start justify-center rounded-full border border-ink/30 p-1">
               <span className="h-1 w-0.5 rounded-full bg-accent" />
