@@ -1,40 +1,6 @@
 import artmedia from "../assets/companies/artmedia.jpg";
-
-function CapIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-4 w-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3 10 12 5l9 5-9 5-9-5Z" />
-      <path d="M7 12.5V17c0 .8 2.2 2.2 5 2.2s5-1.4 5-2.2v-4.5" />
-    </svg>
-  );
-}
-
-function ChipIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-4 w-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="7" y="7" width="10" height="10" rx="1.5" />
-      <path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3" />
-    </svg>
-  );
-}
+import CapIcon from "../assets/svgs/CapIcon";
+import ChipIcon from "../assets/svgs/ChipIcon";
 
 const robotPhotos = [
   {
