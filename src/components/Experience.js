@@ -1,11 +1,14 @@
-//TODO: add logos and summary texts
+import artmedia from "../assets/companies/artmedia.jpg";
+import klipy from "../assets/companies/klipy.jpg";
+import smartsoft from "../assets/companies/smartsoft.jpg";
+
 const roles = [
   {
     company: "SmartSoft",
     role: "Frontend Developer",
     period: "Jul 2026 — Present",
     location: "Hybrid",
-    logo: null,
+    logo: smartsoft,
     summary: ``,
   },
   {
@@ -13,7 +16,7 @@ const roles = [
     role: "Full Stack Developer",
     period: "Feb 2025 — Jul 2026",
     location: "Hybrid",
-    logo: null,
+    logo: klipy,
     summary: `
       • Built a Partner Panel from scratch for API integrators to manage accounts, monitor usage, and track key performance metrics
 
@@ -31,7 +34,7 @@ const roles = [
     role: "Frontend Developer",
     period: "Oct 2022 — Jan 2025",
     location: "Hybrid",
-    logo: null,
+    logo: artmedia,
     summary: `
       • Worked on a wide range of client projects across different industries within a software development company
 
@@ -69,7 +72,7 @@ function ArrowUpRight({ className = "h-3.5 w-3.5" }) {
 function Experience() {
   return (
     <section id="experience" className="relative">
-      <div className="container py-12 xl:py-20">
+      <div className="container py-12 xl:py-18">
         <div className="flex gap-4 items-center justify-between">
           <div>
             <h2 className="text-xl font-medium tracking-medium text-ink">
@@ -95,7 +98,7 @@ function Experience() {
           {roles.map((job, index) => (
             <li
               key={job.company}
-              className="group border-b border-ink/10 py-8 transition-colors duration-300 hover:border-accent md:py-10"
+              className="group border-b border-ink/10 py-8 transition-colors duration-300 hover:border-accent"
             >
               <div className="flex gap-4 md:gap-5">
                 <span className="font-mono text-base text-ink/30 transition-colors duration-300 group-hover:text-accent">
@@ -106,13 +109,13 @@ function Experience() {
                     <img
                       src={job.logo}
                       alt={`${job.company} logo`}
-                      className="h-full w-full object-contain p-1.5"
+                      className="h-full w-full object-cover"
                     />
                   ) : null}
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-start justify-between sm:gap-4 flex-col sm:flex-row">
                     <h3 className="text-lg font-semibold tracking-tight text-ink md:text-xl">
                       {job.role}
                     </h3>
@@ -121,13 +124,13 @@ function Experience() {
                     </p>
                   </div>
 
-                  <p className="mt-1 text-base font-medium text-ink/50">
+                  <p className="text-base font-medium text-ink/50">
                     {job.company}
                     <span className="mx-1.5 text-ink/25">·</span>
                     {job.location}
                   </p>
 
-                  <p className="mt-4 max-w-4xl text-base font-medium text-ink">
+                  <p className="mt-2 max-w-4xl text-base font-medium text-ink">
                     {job.summary}
                   </p>
                 </div>
