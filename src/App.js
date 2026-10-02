@@ -3,6 +3,7 @@ import Beyond from "./components/Beyond";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 import SectionSeparation from "./components/SectionSeparation";
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
           <SectionSeparation />
           <Experience />
           <Beyond />
+          <SectionSeparation />
+          <Projects />
           <SectionSeparation />
         </main>
       </div>
