@@ -1,4 +1,5 @@
 import BackgroundDots from "./components/BackgroundDots";
+import Beyond from "./components/Beyond";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -14,6 +15,7 @@ function App() {
           <Hero />
           <SectionSeparation />
           <Experience />
+          <Beyond />
           <SectionSeparation />
         </main>
       </div>

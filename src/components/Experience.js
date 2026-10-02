@@ -74,11 +74,12 @@ function Experience() {
     <section id="experience" className="relative">
       <div className="container py-12 xl:py-18">
         <div className="flex gap-4 items-center justify-between">
-          <div>
-            <h2 className="text-xl font-light tracking-medium text-ink">
-              Experience
-            </h2>
-          </div>
+          <h2 className="text-xl font-light tracking-medium text-ink">
+            Experience
+            <span className="ml-1 text-sm font-light text-ink/50 italic">
+              work
+            </span>
+          </h2>
           <a
             href="/resume.pdf"
             target="_blank"
@@ -115,7 +116,7 @@ function Experience() {
                     <h3 className="text-lg font-semibold tracking-tight text-ink md:text-xl">
                       {job.role}
                     </h3>
-                    <p className="shrink-0 pt-0.5 text-sm font-medium text-ink italic">
+                    <p className="shrink-0 pt-0.5 text-sm font-medium text-ink/50 italic">
                       {job.period}
                     </p>
                   </div>
