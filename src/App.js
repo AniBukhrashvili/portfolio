@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import SectionSeparation from "./components/SectionSeparation";
+import Stack from "./components/Stack";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Beyond />
           <SectionSeparation />
           <Projects />
+          <SectionSeparation />
+          <Stack />
           <SectionSeparation />
         </main>
       </div>

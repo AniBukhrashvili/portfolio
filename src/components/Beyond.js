@@ -24,7 +24,7 @@ const robotPhotos = [
 function Beyond() {
   return (
     <section id="beyond" className="relative">
-      <div className="container md:py-12">
+      <div className="container pb-6">
         <h2 className="text-lg font-light tracking-medium text-ink">
           Things I&apos;ve done outside of work
         </h2>

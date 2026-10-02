@@ -30,6 +30,15 @@ function Projects() {
             </li>
           ))}
         </ul>
+        <a
+            href="https://github.com/AniBukhrashvili"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 text-sm font-light text-ink/50 transition-colors hover:text-accent mt-4 justify-end"
+          >
+            Personal projects
+            <ArrowUpRight className="h-3 w-3" />
+          </a>
       </div>
     </section>
   );
