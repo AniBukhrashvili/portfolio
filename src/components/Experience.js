@@ -78,7 +78,7 @@ function Experience() {
           {roles.map((job, index) => (
             <li
               key={job.company}
-              className="group border-b border-ink/10 py-8 transition-colors duration-300 hover:border-accent"
+              className="group border-b border-dashed border-ink/10 py-8 transition-colors duration-300 hover:border-accent"
             >
               <div className="flex gap-4 md:gap-5">
                 <span className="font-mono text-base text-ink/30 transition-colors duration-300 group-hover:text-accent">

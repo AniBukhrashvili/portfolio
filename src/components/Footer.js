@@ -20,8 +20,8 @@ const links = [
 
 function Footer() {
   return (
-    <footer className="relative">
-      <div className="container pb-8 pt-20">
+    <footer className="relative bg-page/80 backdrop-blur-md">
+      <div className="container pb-8 pt-10">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <a
             href="#home"
@@ -31,7 +31,7 @@ function Footer() {
 
           <nav
             aria-label="Footer"
-            className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-light text-ink/70"
+            className="flex flex-col gap-x-6 gap-y-3 text-sm font-light text-ink/70 mr-20"
           >
             {links.map((link) => (
               <a
@@ -54,7 +54,7 @@ function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 border-t border-ink/10 pt-5">
+        <div className="mt-10 border-t border-dashed border-ink/10 pt-5">
           <p className="text-xs font-light text-ink/40">
             © {new Date().getFullYear()} Ani Bukhrashvili
           </p>

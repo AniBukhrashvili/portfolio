@@ -19,15 +19,16 @@ function Projects() {
         </h2>        
         <ul className="mt-4">
           {projects.map((project) => (
-            <li key={project.title} className="border-b border-ink/10 flex items-center justify-between group">
-              <a
-                href={project.href}
-                className="block py-3 text-base font-medium text-ink group-hover:text-accent transition-colors"
-              >
-                {project.title}
-              </a>
-              <ArrowUpRight className="h-3 w-3 group-hover:text-accent transition-colors" />
-            </li>
+            <a
+              key={project.title}
+              href={project.href}
+              className="block py-3 text-base font-medium text-ink group transition-colors"
+            >
+              <li className="border-b border-ink/10 flex items-center justify-between group-hover:text-accent transition-colors">
+                  {project.title}
+                <ArrowUpRight className="h-3 w-3 group-hover:text-accent transition-colors" />
+              </li>
+            </a>
           ))}
         </ul>
         <a

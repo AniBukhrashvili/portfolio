@@ -1,3 +1,17 @@
+import css from "../assets/stack/css.svg";
+import gsap from "../assets/stack/gsap.svg";
+import html5 from "../assets/stack/html5.svg";
+import javascript from "../assets/stack/javascript.svg";
+import nextjs from "../assets/stack/nextjs.svg";
+import nodejs from "../assets/stack/nodejs.svg";
+import pixijs from "../assets/stack/pixijs.svg";
+import react from "../assets/stack/react.svg";
+import reactrouter from "../assets/stack/reactrouter.svg";
+import redux from "../assets/stack/redux.svg";
+import sass from "../assets/stack/sass.svg";
+import tailwind from "../assets/stack/tailwind.svg";
+import tanstack from "../assets/stack/tanstack.svg";
+import typescript from "../assets/stack/typescript.svg";
 import ArrowUpRight from "../assets/svgs/ArrowUpRight";
 import CodeEditor from "./CodeEditor";
 import DinoGame from "./DinoGame";
@@ -13,20 +27,30 @@ const links = [
   },
 ];
 
-// TODO: Add stack
 const stack = [
-  { name: "React" },
-  { name: "Next.js" },
-  { name: "TypeScript" },
-  { name: "JavaScript" },
-  { name: "Tailwind" },
-  { name: "PixiJS" },
+  { name: "HTML5", icon: html5 },
+  { name: "CSS3", icon: css },
+  { name: "Sass", icon: sass },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React", icon: react },
+  { name: "Next.js", icon: nextjs },
+  { name: "React Router", icon: reactrouter },
+  { name: "PixiJS", icon: pixijs },
+  { name: "Tailwind", icon: tailwind },
+  { name: "Redux", icon: redux },
+  { name: "TanStack Query", icon: tanstack },
+  { name: "GSAP", icon: gsap },
+  { name: "Node.js", icon: nodejs },
 ];
 
 function StackMarquee() {
   return (
     <div className="group flex h-full min-h-20 items-center overflow-hidden rounded-2xl border border-ink/10 bg-ink/5 [mask-image:linear-gradient(to_right,transparent,black_12%,black_90%,transparent)]">
-      <div className="logo-marquee flex w-max">
+      <div
+        className="logo-marquee flex w-max"
+        style={{ animationDuration: `${stack.length * 2.8}s` }}
+      >
         {[0, 1].map((copy) => (
           <div
             key={copy}
@@ -38,7 +62,16 @@ function StackMarquee() {
                 key={`${copy}-${item.name}`}
                 className="flex items-center gap-2 text-ink/80"
               >
-                <span className="text-sm font-medium">{item.name}</span>
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 p-1.5">
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="h-full w-full object-contain"
+                  />
+                </span>
+                <span className="whitespace-nowrap text-sm font-medium">
+                  {item.name}
+                </span>
               </div>
             ))}
           </div>

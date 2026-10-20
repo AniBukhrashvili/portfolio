@@ -25,6 +25,7 @@ function App() {
           <Stack />
           <SectionSeparation />
         </main>
+        <div className="border-t border-ink/10 mt-10" />
         <Footer />
       </div>
     </div>
