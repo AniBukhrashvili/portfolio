@@ -1,6 +1,7 @@
 import BackgroundDots from "./components/BackgroundDots";
 import Beyond from "./components/Beyond";
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -24,6 +25,7 @@ function App() {
           <Stack />
           <SectionSeparation />
         </main>
+        <Footer />
       </div>
     </div>
   );
