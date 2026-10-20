@@ -62,7 +62,7 @@ function StackMarquee() {
                 key={`${copy}-${item.name}`}
                 className="flex items-center gap-2 text-ink/80"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 p-1.5">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--stack-tile)] p-1.5">
                   <img
                     src={item.icon}
                     alt=""
