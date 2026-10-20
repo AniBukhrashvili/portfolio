@@ -113,13 +113,13 @@ function Stack() {
           </div>
         </div>
 
-        <ul className="mt-4 flex flex-wrap gap-3 rounded-2xl border border-ink/10 bg-ink/5 p-5 min-h-[240px]">
+        <ul className="mt-4 flex flex-wrap gap-4 rounded-2xl border border-ink/10 p-5 min-h-[240px]">
           {visible.map((item) => (
             <li
               key={item.name}
-              className="flex w-24 flex-col items-center gap-2 text-center"
+              className="flex w-16 flex-col items-center gap-2 text-center"
             >
-              <span className="flex h-20 w-20 items-center justify-center rounded-xl border border-ink/10 bg-[var(--stack-tile)] p-2">
+              <span className="flex h-16 w-16 items-center justify-center rounded-xl border border-ink/10 bg-[var(--stack-tile)] p-2">
                 <img
                   src={item.icon}
                   alt=""

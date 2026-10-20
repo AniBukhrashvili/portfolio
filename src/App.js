@@ -1,4 +1,5 @@
 import BackgroundDots from "./components/BackgroundDots";
+import Contact from "./components/Contact";
 import Beyond from "./components/Beyond";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
@@ -24,6 +25,7 @@ function App() {
           <SectionSeparation />
           <Stack />
           <SectionSeparation />
+          <Contact />
         </main>
         <div className="border-t border-ink/10 mt-10" />
         <Footer />
