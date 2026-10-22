@@ -10,7 +10,12 @@ const roles = [
     period: "Jul 2026 — Present",
     location: "Hybrid",
     logo: smartsoft,
-    summary: ``,
+    summary: [
+      "Develop interactive iGaming games using PixiJS",
+      "Collaborate with an Agile team of animators, graphic designers, developers, testers and UI/UX designers",
+      "Focus on smooth animations, performance optimization and a consistent player experience across different devices and browsers",
+      "Transform design assets into engaging, interactive game screens",
+    ],
   },
   {
     company: "KLIPY",
@@ -18,17 +23,13 @@ const roles = [
     period: "Feb 2025 — Jul 2026",
     location: "Hybrid",
     logo: klipy,
-    summary: `
-      • Built a Partner Panel from scratch for API integrators to manage accounts, monitor usage, and track key performance metrics
-
-      • Contributed to the KLIPY API platform for GIFs, stickers, and other content, helping applications increase user engagement and revenue
-
-      • Implemented REST API integrations to enable efficient data flow and seamless communication between frontend and backend services
-
-      • Worked in Agile teams, participating in sprint planning, backlog grooming, reviews, and retrospectives
-
-      • Focused on scalability, performance, and developer experience across external API integrations
-    `,
+    summary: [
+      "Built a Partner Panel from scratch for API integrators to manage accounts, monitor usage, and track key performance metrics",
+      "Contributed to the KLIPY API platform for GIFs, stickers, and other content, helping applications increase user engagement and revenue",
+      "Implemented REST API integrations to enable efficient data flow and seamless communication between frontend and backend services",
+      "Worked in Agile teams, participating in sprint planning, backlog grooming, reviews, and retrospectives",
+      "Focused on scalability, performance, and developer experience across external API integrations",
+    ],
   },
   {
     company: "Artmedia",
@@ -36,19 +37,14 @@ const roles = [
     period: "Oct 2022 — Jan 2025",
     location: "Hybrid",
     logo: artmedia,
-    summary: `
-      • Worked on a wide range of client projects across different industries within a software development company
-
-      • Built responsive, interactive, and user-focused web interfaces using React.js and Next.js
-
-      • Styled and structured UI components using Tailwind CSS and BEM methodology to maintain scalable and consistent frontend architecture
-
-      • Improved SEO performance and ensured cross-browser compatibility across multiple projects
-
-      • Focused on improving user experience, performance, and visual consistency across applications
-
-      • Actively contributed to Agile development processes, including sprint planning, task estimation, and team collaboration
-    `,
+    summary: [
+      "Worked on a wide range of client projects across different industries within a software development company",
+      "Built responsive, interactive, and user-focused web interfaces using React.js and Next.js",
+      "Styled and structured UI components using Tailwind CSS and BEM methodology to maintain scalable and consistent frontend architecture",
+      "Improved SEO performance and ensured cross-browser compatibility across multiple projects",
+      "Focused on improving user experience, performance, and visual consistency across applications",
+      "Actively contributed to Agile development processes, including sprint planning, task estimation, and team collaboration",
+    ],
   },
 ];
 
@@ -110,9 +106,13 @@ function Experience() {
                     {job.location}
                   </p>
 
-                  <p className="mt-2 max-w-4xl text-base font-light text-ink">
-                    {job.summary}
-                  </p>
+                  {job.summary.length > 0 && (
+                    <ul className="mt-3 max-w-4xl list-disc space-y-1.5 pl-4 text-base font-light text-ink marker:text-ink/40">
+                      {job.summary.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             </li>
