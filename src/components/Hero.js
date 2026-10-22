@@ -15,6 +15,7 @@ import typescript from "../assets/stack/typescript.svg";
 import ArrowUpRight from "../assets/svgs/ArrowUpRight";
 import CodeEditor from "./CodeEditor";
 import DinoGame from "./DinoGame";
+import SlotCard from "./SlotCard";
 
 const links = [
   {
@@ -77,23 +78,6 @@ function StackMarquee() {
           </div>
         ))}
       </div>
-    </div>
-  );
-}
-
-// TODO: Add slot card
-function SlotCard() {
-  return (
-    <div className="flex h-full flex-col justify-between rounded-2xl border border-ink/10 bg-ink/5 p-3">
-      <div className="grid grid-cols-3 gap-1 rounded-lg border border-ink/10 bg-page p-1.5">
-        {/* {reels.map((reel) => (
-          <SlotReel key={reel.duration} duration={reel.duration} delay={reel.delay} />
-        ))} */}
-        slot reel slot reel slot reel slot reel slot
-      </div>
-      <p className="mt-2 text-[11px] font-medium text-ink/55">
-        <span className="text-accent">PixiJS</span>
-      </p>
     </div>
   );
 }

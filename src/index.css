@@ -150,6 +150,20 @@ html[data-theme="light"] {
   animation: logo-marquee 20s linear infinite;
 }
 
+.slot-window {
+  container-type: size;
+}
+
+.slot-row-strip {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-row-line {
+  height: calc(100cqh / 3);
+  flex: 0 0 calc(100cqh / 3);
+}
+
 .group:hover .logo-marquee {
   animation-play-state: paused;
 }
