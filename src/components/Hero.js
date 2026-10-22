@@ -172,7 +172,7 @@ function Hero() {
             <SlotCard />
           </li>
           <li className="flex flex-col gap-1 justify-end rounded-2xl border border-ink/10 bg-ink/5 px-3 py-3 sm:col-span-3">
-            <p className="text-5xl font-semibold leading-none text-ink">3+</p>
+            <p className="text-5xl font-semibold leading-none text-ink">4+</p>
             <p className="mt-1.5 text-lg font-normal leading-tight text-ink/55">
               Years of experience
             </p>

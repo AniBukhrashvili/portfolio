@@ -80,7 +80,7 @@ const stack = [
 ];
 
 function Stack() {
-  const [group, setGroup] = useState("All");
+  const [group, setGroup] = useState("Frontend");
   const visible =
     group === "All" ? stack : stack.filter((item) => item.group === group);
 

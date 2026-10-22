@@ -27,6 +27,7 @@ const roles = [
       "Built a Partner Panel from scratch for API integrators to manage accounts, monitor usage, and track key performance metrics",
       "Contributed to the KLIPY API platform for GIFs, stickers, and other content, helping applications increase user engagement and revenue",
       "Implemented REST API integrations to enable efficient data flow and seamless communication between frontend and backend services",
+      "Mentored a teammate by explaining project architecture, technical decisions and implementation details to support growth and improve team collaboration",
       "Worked in Agile teams, participating in sprint planning, backlog grooming, reviews, and retrospectives",
       "Focused on scalability, performance, and developer experience across external API integrations",
     ],

@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         page: "rgb(var(--page) / <alpha-value>)",
         ink: "rgb(var(--ink) / <alpha-value>)",
-        accent: "#8DA3C7",
+        accent: "#89B4FA",
       },
       fontFamily: {
         sans: ['"Space Grotesk"', "sans-serif"],

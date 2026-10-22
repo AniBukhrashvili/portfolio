@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --page: 10 10 18;
+  --page: 10 9 4;
   --ink: 255 255 255;
   --stack-tile: #27272a;
   --code-bg: #1c1c1e;

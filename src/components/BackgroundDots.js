@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-const DOT_COUNT = 50;
+const DOT_COUNT = 30;
 
 function createDots() {
   return Array.from({ length: DOT_COUNT }, (_, id) => {
