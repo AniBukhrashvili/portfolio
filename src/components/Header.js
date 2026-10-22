@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -52,6 +52,7 @@ function NavLink({ href, label, onClick }) {
 function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
+  const headerRef = useRef(null);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -79,10 +80,29 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const onPointerDown = (event) => {
+      if (!headerRef.current?.contains(event.target)) setOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("pointerdown", onPointerDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [open]);
+
   const close = () => setOpen(false);
 
   return (
-    <header className="container sticky top-0 z-40 bg-page/80 backdrop-blur-md">
+    <header
+      ref={headerRef}
+      className="container sticky top-0 z-40 bg-page/80 backdrop-blur-md"
+    >
       <div className="flex items-center justify-between py-3.5">
         <a href="#home" className="shrink-0" onClick={close}>
           {/* TODO: Add logo */}
