@@ -83,7 +83,7 @@ function SlotCard() {
           onClick={spin}
           disabled={spinning}
           aria-label="Spin"
-          className="absolute -bottom-2.5 -right-1.5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 bg-page/90 text-ink shadow-sm backdrop-blur-sm transition-colors hover:border-accent/50 hover:text-accent disabled:opacity-40"
+          className="absolute -bottom-2.5 -right-1.5 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 bg-page/90 text-ink shadow-sm backdrop-blur-sm  hover:border-accent/50 hover:text-accent disabled:opacity-40"
         >
           <SpinIcon className={`h-4 w-4 ${spinning ? "animate-spin" : ""}`} />
         </button>

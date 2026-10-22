@@ -32,7 +32,7 @@ function Contact() {
                 type="text"
                 required
                 autoComplete="name"
-                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-accent"
+                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
               />
             </label>
             <label className="block">
@@ -42,7 +42,7 @@ function Contact() {
                 type="email"
                 required
                 autoComplete="email"
-                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-accent"
+                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
               />
             </label>
           </div>
@@ -53,13 +53,13 @@ function Contact() {
               name="message"
               required
               rows={4}
-              className="mt-1 w-full resize-none border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-accent"
+              className="mt-1 w-full resize-none border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
             />
           </label>
 
           <button
             type="submit"
-            className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink transition-colors hover:text-accent"
+            className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink  hover:text-accent"
           >
             Send
             <ArrowUpRight className="h-3.5 w-3.5" />

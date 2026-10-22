@@ -17,7 +17,7 @@ function ThemeToggle({ theme, onToggle }) {
       onClick={onToggle}
       aria-label={isDark ? "Switch to white mode" : "Switch to dark mode"}
       aria-pressed={isDark}
-      className="flex text-ink transition-colors hover:text-accent"
+      className="flex text-ink  hover:text-accent"
     >
       <svg viewBox="0 0 16 16" aria-hidden="true" className="h-4 w-4">
         <circle

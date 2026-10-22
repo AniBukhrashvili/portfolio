@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --page: 10 10 10;
+  --page: 10 10 18;
   --ink: 255 255 255;
   --stack-tile: #27272a;
   --code-bg: #1c1c1e;
@@ -45,6 +45,15 @@ html[data-theme="light"] {
 
   body {
     @apply m-0 bg-page font-sans font-medium text-ink antialiased;
+  }
+
+  *,
+  *::before,
+  *::after,
+  *::placeholder,
+  *::marker {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, caret-color;
+    transition-duration: 200ms;
   }
 }
 
@@ -191,5 +200,13 @@ html[data-theme="light"] {
 
   .exp-pulse {
     animation: none;
+  }
+
+  *,
+  *::before,
+  *::after,
+  *::placeholder,
+  *::marker {
+    transition-duration: 0s;
   }
 }

@@ -184,7 +184,7 @@ function Hero() {
           <li className="sm:col-span-4">
             <a
               href="#projects"
-              className="flex h-full min-h-20 flex-col justify-end rounded-2xl border border-ink/10 bg-ink/5 p-5 text-ink transition-colors hover:text-accent"
+              className="flex h-full min-h-20 flex-col justify-end rounded-2xl border border-ink/10 bg-ink/5 p-5 text-ink  hover:text-accent"
             >
               <span className="inline-flex items-center gap-2 text-xl font-semibold leading-tight">
                 Projects

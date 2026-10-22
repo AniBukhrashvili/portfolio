@@ -101,7 +101,7 @@ function Stack() {
                 type="button"
                 onClick={() => setGroup(item)}
                 aria-pressed={group === item}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium  ${
                   group === item
                     ? "text-accent border-b border-accent"
                     : "text-ink/45 hover:text-ink"

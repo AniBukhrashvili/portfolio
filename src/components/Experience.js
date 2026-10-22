@@ -63,7 +63,7 @@ function Experience() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.12em] text-ink/50 transition-colors hover:text-accent"
+            className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.12em] text-ink/50  hover:text-accent"
           >
             Resume
             <ArrowUpRight className="h-3 w-3" />
@@ -74,10 +74,10 @@ function Experience() {
           {roles.map((job, index) => (
             <li
               key={job.company}
-              className="group border-b border-dashed border-ink/10 py-8 transition-colors duration-300 hover:border-accent"
+              className="group border-b border-dashed border-ink/10 py-8  duration-300 hover:border-accent"
             >
               <div className="flex gap-4 md:gap-5">
-                <span className="font-mono text-base text-ink/30 transition-colors duration-300 group-hover:text-accent">
+                <span className="font-mono text-base text-ink/30  duration-300 group-hover:text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-ink/10 bg-ink/5">

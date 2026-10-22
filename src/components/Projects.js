@@ -24,11 +24,11 @@ function Projects() {
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="block py-3 text-base font-medium text-ink group transition-colors outline-none"
+              className="block py-3 text-base font-medium text-ink group  outline-none"
             >
-              <li className="border-b border-ink/10 flex items-center justify-between group-hover:text-accent transition-colors">
+              <li className="border-b border-ink/10 flex items-center justify-between group-hover:text-accent ">
                   {project.title}
-                <ArrowUpRight className="h-3 w-3 group-hover:text-accent transition-colors" />
+                <ArrowUpRight className="h-3 w-3 group-hover:text-accent " />
               </li>
             </a>
           ))}
@@ -41,7 +41,7 @@ function Projects() {
             href="https://github.com/AniBukhrashvili"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 text-sm font-light text-ink/50 transition-colors hover:text-accent sm:justify-end"
+            className="flex items-center gap-1.5 text-sm font-light text-ink/50  hover:text-accent sm:justify-end"
           >
             Personal projects
             <ArrowUpRight className="h-3 w-3" />

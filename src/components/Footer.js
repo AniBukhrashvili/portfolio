@@ -25,7 +25,7 @@ function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <a
             href="#home"
-            className="italic font-light text-ink/60 transition-colors hover:text-accent"
+            className="italic font-light text-ink/60  hover:text-accent"
           >
             Ani Bukhrashvili
           </a>
@@ -40,7 +40,7 @@ function Footer() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noreferrer" : undefined}
-                className="inline-flex items-center gap-1.5 transition-colors hover:text-accent"
+                className="inline-flex items-center gap-1.5  hover:text-accent"
               >
                 {link.label}
                 <ArrowUpRight className="h-3 w-3" />
@@ -48,7 +48,7 @@ function Footer() {
             ))}
             <a
               href="mailto:bukhrashviliiani@gmail.com"
-              className="transition-colors hover:text-accent"
+              className=" hover:text-accent"
             >
               bukhrashviliiani@gmail.com
             </a>
