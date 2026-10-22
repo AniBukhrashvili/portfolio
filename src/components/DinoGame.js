@@ -124,8 +124,18 @@ function DinoGame() {
     canvas.addEventListener("pointerdown", onPointer);
 
     let raf = 0;
+    let lastTime = 0;
+    let alive = true;
+    const frameMs = 1000 / 60;
 
-    const loop = () => {
+    const loop = (now) => {
+      if (!alive) return;
+
+      const delta = lastTime ? Math.min(now - lastTime, 34) : frameMs;
+      lastTime = now;
+      const scale = delta / frameMs;
+      const step = scale * 1.25;
+
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
       const floor = height - 22;
@@ -134,15 +144,15 @@ function DinoGame() {
       ctx.fillStyle = inkColor();
 
       if (state.status === "run") {
-        state.tick += 1;
-        state.score += state.speed * 0.08;
+        state.tick += step;
+        state.score += state.speed * 0.08 * step;
         state.speed = Math.min(11, 5 + state.score / 180);
-        state.ground = (state.ground + state.speed) % 16;
-        state.vy += 0.48;
-        state.y = Math.min(0, state.y + state.vy);
+        state.ground = (state.ground + state.speed * step) % 16;
+        state.vy += 0.48 * step;
+        state.y = Math.min(0, state.y + state.vy * step);
         if (state.y === 0) state.vy = 0;
 
-        state.spawn -= 1;
+        state.spawn -= step;
         if (state.spawn <= 0) {
           const wide = Math.random() > 0.45;
           state.obstacles.push({
@@ -154,11 +164,11 @@ function DinoGame() {
         }
 
         state.obstacles.forEach((item) => {
-          item.x -= state.speed;
+          item.x -= state.speed * step;
         });
         state.obstacles = state.obstacles.filter((item) => item.x > -40);
         state.clouds.forEach((cloud) => {
-          cloud.x -= state.speed * 0.25;
+          cloud.x -= state.speed * 0.25 * step;
           if (cloud.x < -30) cloud.x = width + 20;
         });
 
@@ -176,7 +186,7 @@ function DinoGame() {
           state.best = Math.max(state.best, Math.floor(state.score));
         }
       } else {
-        state.blink += 1;
+        state.blink += scale;
       }
 
       ctx.globalAlpha = 0.45;
@@ -235,6 +245,7 @@ function DinoGame() {
     raf = requestAnimationFrame(loop);
 
     return () => {
+      alive = false;
       cancelAnimationFrame(raf);
       observer.disconnect();
       window.removeEventListener("keydown", onKey);

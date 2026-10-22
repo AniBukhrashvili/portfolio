@@ -50,7 +50,7 @@ function Beyond() {
                   Computer science, studied and lived in Vigo, Spain
                 </p>
               </div>
-              <p className="mt-4 text-xs font-light text-ink/40">Vigo, Spain - 2024</p>
+              <p className="mt-4 text-xs font-light text-ink/40 italic">2024</p>
             </div>
           </article>
 
@@ -78,6 +78,7 @@ function Beyond() {
                   className="h-20 w-full cursor-pointer object-cover"
                 />
               </button>
+              <p className="mt-4 text-xs font-light text-ink/40 italic">2022</p>
             </div>
           </article>
         </div>
