@@ -1,18 +1,33 @@
-import ArrowUpRight from "../assets/svgs/ArrowUpRight";
+const details = [
+  {
+    label: "Email",
+    value: "bukhrashviliiani@gmail.com",
+    href: "mailto:bukhrashviliiani@gmail.com",
+  },
+  {
+    label: "Resume",
+    value: "View Resume",
+    href: "/resume.pdf",
+    external: true,
+  },
+  {
+    label: "Location",
+    value: "Tbilisi, Georgia",
+  },
+];
+
+const socials = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ani-bukhrashvili-a5313622b",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/AniBukhrashvili",
+  },
+];
 
 function Contact() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const name = String(data.get("name")).trim();
-    const from = String(data.get("email")).trim();
-    const message = String(data.get("message")).trim();
-    const subject = encodeURIComponent(`Portfolio message from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${from}`);
-
-    console.log({ subject, body });
-  };
-
   return (
     <section id="contact" className="relative">
       <div className="container py-12 xl:py-18">
@@ -23,48 +38,62 @@ function Contact() {
           </span>
         </h2>
 
-        <form onSubmit={handleSubmit} className="mt-8 max-w-lg">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <label className="block">
-              <span className="text-xs font-medium text-ink/45">Name</span>
-              <input
-                name="name"
-                type="text"
-                required
-                autoComplete="name"
-                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
-              />
-            </label>
-            <label className="block">
-              <span className="text-xs font-medium text-ink/45">Email</span>
-              <input
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-                className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
-              />
-            </label>
+        <div className="mt-8 md:max-w-xl">
+          <p className="max-w-xl text-base font-light leading-7 text-ink/70">
+            I&apos;m actively growing my career as a Frontend Developer and
+            I&apos;m open to new opportunities. If you have a project, a
+            role or a question, reach out. I would be glad to hear from you.
+          </p>
+
+          <div className="mt-8 border-t border-ink/10 pt-8">
+            <div className="grid gap-10 sm:grid-cols-2">
+              <div className="space-y-6">
+                {details.map((item) => (
+                  <div key={item.label}>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink/40">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        {...(item.external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                        className="mt-2 block text-sm font-medium text-ink hover:text-accent"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="mt-2 text-sm font-medium text-ink">
+                        {item.value}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div>
+                <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-ink/40">
+                  Social
+                </p>
+                <ul className="mt-2 space-y-2">
+                  {socials.map((item) => (
+                    <li key={item.label}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium text-ink hover:text-accent"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <label className="mt-6 block">
-            <span className="text-xs font-medium text-ink/45">Message</span>
-            <textarea
-              name="message"
-              required
-              rows={4}
-              className="mt-1 w-full resize-none border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none  placeholder:text-ink/30 focus:border-accent"
-            />
-          </label>
-
-          <button
-            type="submit"
-            className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink  hover:text-accent"
-          >
-            Send
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </button>
-        </form>
+        </div>
       </div>
     </section>
   );

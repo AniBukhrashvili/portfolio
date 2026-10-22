@@ -108,7 +108,7 @@ function Experience() {
                   </p>
 
                   {job.summary.length > 0 && (
-                    <ul className="mt-3 max-w-4xl list-disc space-y-1.5 pl-4 text-base font-light text-ink marker:text-ink/40">
+                    <ul className="mt-3 max-w-4xl list-disc space-y-1.5 pl-4 text-base font-light text-ink/70 marker:text-ink/40">
                       {job.summary.map((point) => (
                         <li key={point}>{point}</li>
                       ))}
