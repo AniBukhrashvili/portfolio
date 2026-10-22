@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 import antdesign from "../assets/stack/antdesign.svg";
 import azuredevops from "../assets/stack/azuredevops.svg";
 import bootstrap from "../assets/stack/bootstrap.svg";
@@ -29,7 +30,7 @@ import wordpress from "../assets/stack/wordpress.svg";
 import css from "../assets/stack/css.svg";
 import jest from "../assets/stack/jest.svg";
 import vite from "../assets/stack/vite.svg";
-import gsap from "../assets/stack/gsap.svg";
+import gsapIcon from "../assets/stack/gsap.svg";
 import tanstack from "../assets/stack/tanstack.svg";
 import sentry from "../assets/stack/sentry.svg";
 import npm from "../assets/stack/npm.svg";
@@ -56,7 +57,7 @@ const stack = [
   { name: "Ant Design", icon: antdesign, group: "Frontend" },
   { name: "Redux", icon: redux, group: "Frontend" },
   { name: "TanStack Query", icon: tanstack, group: "Frontend" },
-  { name: "GSAP", icon: gsap, group: "Frontend" },
+  { name: "GSAP", icon: gsapIcon, group: "Frontend" },
   { name: "WordPress", icon: wordpress, group: "Backend" },
   { name: "Node.js", icon: nodejs, group: "Backend" },
   { name: "Express", icon: express, group: "Backend" },
@@ -81,8 +82,75 @@ const stack = [
 
 function Stack() {
   const [group, setGroup] = useState("Frontend");
+  const listRef = useRef(null);
+  const heightRef = useRef(0);
+  const firstRender = useRef(true);
   const visible =
     group === "All" ? stack : stack.filter((item) => item.group === group);
+
+  useLayoutEffect(() => {
+    const list = listRef.current;
+    if (!list) return undefined;
+
+    if (firstRender.current) {
+      firstRender.current = false;
+      heightRef.current = list.offsetHeight;
+      return undefined;
+    }
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) {
+      heightRef.current = list.offsetHeight;
+      return undefined;
+    }
+
+    const fromHeight = heightRef.current || list.offsetHeight;
+    const toHeight = list.offsetHeight;
+    const items = list.querySelectorAll("li");
+
+    const tween = gsap.timeline({
+      onComplete: () => {
+        heightRef.current = list.offsetHeight;
+      },
+    });
+
+    if (fromHeight !== toHeight) {
+      tween.fromTo(
+        list,
+        { height: fromHeight, overflow: "hidden" },
+        {
+          height: toHeight,
+          duration: 0.4,
+          ease: "power2.inOut",
+          clearProps: "height,overflow",
+        },
+        0
+      );
+    }
+
+    tween.fromTo(
+      items,
+      { autoAlpha: 0, y: 12, scale: 0.94 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.4,
+        stagger: { amount: 0.28 },
+        ease: "power2.out",
+        clearProps: "transform,opacity,visibility",
+      },
+      0
+    );
+
+    return () => tween.kill();
+  }, [group]);
+
+  const selectGroup = (item) => {
+    if (item === group) return;
+    if (listRef.current) heightRef.current = listRef.current.offsetHeight;
+    setGroup(item);
+  };
 
   return (
     <section id="stack" className="relative">
@@ -99,7 +167,7 @@ function Stack() {
               <button
                 key={item}
                 type="button"
-                onClick={() => setGroup(item)}
+                onClick={() => selectGroup(item)}
                 aria-pressed={group === item}
                 className={`text-sm font-medium  ${
                   group === item
@@ -113,7 +181,10 @@ function Stack() {
           </div>
         </div>
 
-        <ul className="mt-4 flex flex-wrap gap-4 rounded-2xl border border-ink/10 p-5 min-h-[240px]">
+        <ul
+          ref={listRef}
+          className="mt-4 flex flex-wrap content-start gap-4 rounded-2xl border border-ink/10 p-5 min-h-[240px]"
+        >
           {visible.map((item) => (
             <li
               key={item.name}

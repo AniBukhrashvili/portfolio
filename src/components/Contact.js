@@ -7,7 +7,7 @@ const details = [
   {
     label: "Resume",
     value: "View Resume",
-    href: "/resume.pdf",
+    href: "/Ani Bukhrashvili - CV.pdf",
     external: true,
   },
   {

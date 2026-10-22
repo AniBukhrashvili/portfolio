@@ -63,7 +63,7 @@ function Experience() {
             </span>
           </h2>
           <a
-            href="/resume.pdf"
+            href="/Ani Bukhrashvili - CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.12em] text-ink/50  hover:text-accent"

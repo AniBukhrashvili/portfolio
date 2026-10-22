@@ -128,7 +128,7 @@ function Hero() {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="/Ani Bukhrashvili - CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 hover:text-accent"
