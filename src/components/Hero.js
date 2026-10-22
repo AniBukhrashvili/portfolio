@@ -105,18 +105,13 @@ function Hero() {
             </span>
           </div>
 
-          <p className="mt-6 max-w-lg text-base font-medium leading-7 text-ink/70">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p className="mt-6 max-w-lg text-base font-light leading-7 text-ink/70">
+            I build modern, high-performance web experiences that combine clean UI, thoughtful UX and smooth interactions. 
+            With 4+ years of experience, I work across React, Next.js, TypeScript and PixiJS, developing everything from scalable web platforms and API integrations to interactive iGaming experiences.
             <br />
             <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
-            <br />
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum
+            At SmartSoft, I focus on game interfaces, animations and performance. Previously, at KLIPY and Artmedia, I built API-driven platforms and client-facing products across different industries.
+            I value clean, maintainable code, collaboration and turning complex ideas into intuitive experiences.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-ink/80">

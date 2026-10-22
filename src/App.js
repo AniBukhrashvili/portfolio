@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import ScrollReveal from "./components/ScrollReveal";
 import SectionSeparation from "./components/SectionSeparation";
 import Stack from "./components/Stack";
 
@@ -15,6 +16,7 @@ function App() {
       <BackgroundDots />
       <div className="relative z-10">
         <Header />
+        <ScrollReveal />
         <main>
           <Hero />
           <SectionSeparation />
