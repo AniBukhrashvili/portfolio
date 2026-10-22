@@ -1,27 +1,29 @@
-import artmedia from "../assets/companies/artmedia.jpg";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import robotPhoto from "../assets/robot.jpg";
 import CapIcon from "../assets/svgs/CapIcon";
 import ChipIcon from "../assets/svgs/ChipIcon";
 
-const robotPhotos = [
-  {
-    src: artmedia,
-    alt: "Artmedia",
-  },
-  {
-    src: artmedia,
-    alt: "Artmedia",
-  },
-  {
-    src: artmedia,
-    alt: "Artmedia",
-  },
-  {
-    src: artmedia,
-    alt: "Artmedia",
-  },
-];
-
 function Beyond() {
+  const [photoOpen, setPhotoOpen] = useState(false);
+
+  useEffect(() => {
+    if (!photoOpen) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setPhotoOpen(false);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [photoOpen]);
+
   return (
     <section id="beyond" className="relative">
       <div className="container pb-6">
@@ -40,8 +42,7 @@ function Beyond() {
               </h3>
               <p className="mt-2 max-w-md text-sm font-light leading-6 text-ink/60">
                 I took part in an Erasmus project from Business and Technology University and received a full scholarship
-                to study computer science in Vigo, Spain. I lived there while I
-                was studying.
+                to study computer science in Vigo, Spain.
               </p>
               <div className="mt-5 max-w-md rounded-xl border border-ink/10 p-4">
                 <p className="text-xs font-medium text-ink/40">Full scholarship</p>
@@ -65,22 +66,41 @@ function Beyond() {
                 I designed a physical robot and wrote the Arduino code that drives
                 its mechanical movements.
               </p>
-              {robotPhotos.length > 0 && (
-                <div className="mt-5 flex gap-2">
-                  {robotPhotos.map((photo, index) => (
-                    <img
-                      key={index}
-                      src={photo.src}
-                      alt={photo.alt}
-                      className="h-14 w-14 rounded-lg object-cover"
-                    />
-                  ))}
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={() => setPhotoOpen(true)}
+                aria-label="Open hardware robot photo"
+                className="mt-5 block max-w-md overflow-hidden rounded-md outline-none"
+              >
+                <img
+                  src={robotPhoto}
+                  alt="Hardware robot"
+                  className="h-20 w-full cursor-pointer object-cover"
+                />
+              </button>
             </div>
           </article>
         </div>
       </div>
+
+      {photoOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[80] flex items-center justify-center bg-black/50 p-4 backdrop-blur-md sm:p-8"
+            onClick={() => setPhotoOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Hardware robot photo"
+          >
+            <img
+              src={robotPhoto}
+              alt="Hardware robot"
+              className="max-h-[90vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            />
+          </div>,
+          document.body
+        )}
     </section>
   );
 }

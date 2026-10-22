@@ -25,8 +25,9 @@ function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <a
             href="#home"
+            className="italic font-light text-ink/60 transition-colors hover:text-accent"
           >
-            LOGO
+            Ani Bukhrashvili
           </a>
 
           <nav
