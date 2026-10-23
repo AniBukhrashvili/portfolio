@@ -19,7 +19,7 @@ const roles = [
   },
   {
     company: "KLIPY",
-    role: "Full Stack Developer",
+    role: "Frontend Developer",
     period: "Feb 2025 — Jul 2026",
     location: "Hybrid",
     logo: klipy,
