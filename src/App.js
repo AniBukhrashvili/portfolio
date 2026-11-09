@@ -21,9 +21,10 @@ function App() {
           <Hero />
           <SectionSeparation />
           <Experience />
-          <Beyond />
           <SectionSeparation />
           <Projects />
+          <SectionSeparation />
+          <Beyond />
           <SectionSeparation />
           <Stack />
           <SectionSeparation />

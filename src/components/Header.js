@@ -4,6 +4,7 @@ const links = [
   { href: "#home", label: "Home" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#education", label: "Education" },
   { href: "#stack", label: "Stack" },
   { href: "#contact", label: "Contact" },
 ];
@@ -146,9 +147,9 @@ function Header() {
         <nav
           id="mobile-menu"
           aria-label="Mobile"
-          className="mobile-nav absolute left-0 top-full z-50 w-full bg-page/95 py-4 backdrop-blur-md md:hidden"
+          className="mobile-nav absolute left-0 top-full z-50 w-full border-b border-ink/10 bg-page py-6 md:hidden"
         >
-          <ul className="flex flex-col items-end gap-4 px-6">
+          <ul className="flex flex-col items-end gap-5 px-1">
             {links.map((link) => (
               <li key={link.href}>
                 <NavLink href={link.href} label={link.label} onClick={close} />

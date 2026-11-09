@@ -57,10 +57,11 @@ function Beyond() {
   const activePhoto = photoOpen ? robotPhotos[photoIndex] : null;
 
   return (
-    <section id="beyond" className="relative">
-      <div className="container pb-6">
-        <h2 className="text-lg font-light tracking-medium text-ink">
-          Things I&apos;ve done outside of work
+    <>
+    <section id="education" className="relative">
+      <div className="container py-12 xl:py-18">
+        <h2 className="text-xl font-light tracking-medium text-ink">
+          Education
         </h2>
 
         <div className="mt-8 grid items-start gap-x-12 gap-y-12 md:grid-cols-2">
@@ -70,22 +71,45 @@ function Beyond() {
             </span>
             <div>
               <h3 className="text-lg font-medium text-ink">
-                Erasmus in Spain
+                Bachelor of Information Technology
               </h3>
               <p className="mt-2 max-w-md text-sm font-light leading-6 text-ink/60">
-                I took part in an Erasmus project from Business and Technology University and received a full scholarship
-                to study computer science in C.P.R. Daniel Castelao in Vigo, Spain.
+                Business and Technology University, Tbilisi, Georgia.
               </p>
-              <div className="mt-5 max-w-md rounded-xl border border-ink/10 p-4">
-                <p className="text-xs font-medium text-ink/40">Full scholarship</p>
-                <p className="mt-1.5 text-base font-medium leading-snug text-ink">
-                  Computer science, studied and lived in Vigo, Spain
-                </p>
-              </div>
-              <p className="mt-4 text-xs font-light text-ink/40 italic">2024</p>
+              <p className="mt-4 text-xs font-light text-ink/40 italic">
+                Sep 2021 — Jul 2025
+              </p>
             </div>
           </article>
 
+          <article className="flex items-start gap-4">
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-ink/15 text-ink/70 shrink-0">
+              <CapIcon />
+            </span>
+            <div>
+              <h3 className="text-lg font-medium text-ink">
+                Erasmus+, Computer Science
+              </h3>
+              <p className="mt-2 max-w-md text-sm font-light leading-6 text-ink/60">
+                Full scholarship for the third-year spring semester at C.P.R.
+                Daniel Castelao in Vigo, Spain, during my bachelor&apos;s degree.
+              </p>
+              <p className="mt-4 text-xs font-light text-ink/40 italic">
+                Apr 2024 — Jul 2024
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beyond" className="relative">
+      <div className="container pt-6 pb-10">
+        <h2 className="text-lg font-light tracking-medium text-ink">
+          Things I&apos;ve done outside of work
+        </h2>
+
+        <div className="mt-8">
           <article className="flex items-start gap-4">
             <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-ink/15 text-ink/70 shrink-0">
               <ChipIcon />
@@ -94,9 +118,9 @@ function Beyond() {
               <h3 className="text-lg font-medium text-ink">
                 Hardware robot
               </h3>
-              <p className="mt-2 max-w-md text-sm font-light leading-6 text-ink/60">
-                I designed a physical robot and wrote the Arduino code that drives
-                its mechanical movements.
+              <p className="mt-2 max-w-xl text-sm font-light leading-6 text-ink/60">
+                I designed a physical robot and wrote the Arduino code that
+                drives its mechanical movements.
               </p>
               <div className="mt-5 grid max-w-md grid-cols-5 gap-1.5">
                 {robotPhotos.map((photo, index) => (
@@ -172,6 +196,7 @@ function Beyond() {
           document.body
         )}
     </section>
+    </>
   );
 }
 

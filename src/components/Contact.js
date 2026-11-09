@@ -5,6 +5,11 @@ const details = [
     href: "mailto:bukhrashviliiani@gmail.com",
   },
   {
+    label: "Phone",
+    value: "+995 568 66 88 90",
+    href: "tel:+995568668890",
+  },
+  {
     label: "Resume",
     value: "View Resume",
     href: "/Ani Bukhrashvili - CV.pdf",

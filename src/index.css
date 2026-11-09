@@ -43,6 +43,10 @@ html[data-theme="light"] {
     min-height: 100%;
   }
 
+  main > section {
+    scroll-margin-top: 4.5rem;
+  }
+
   body {
     @apply m-0 bg-page font-sans font-medium text-ink antialiased;
   }
