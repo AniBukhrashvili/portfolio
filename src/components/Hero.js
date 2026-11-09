@@ -1,9 +1,8 @@
-import css from "../assets/stack/css.svg";
+import antdesign from "../assets/stack/antdesign.svg";
 import gsap from "../assets/stack/gsap.svg";
-import html5 from "../assets/stack/html5.svg";
 import javascript from "../assets/stack/javascript.svg";
+import materialui from "../assets/stack/materialui.svg";
 import nextjs from "../assets/stack/nextjs.svg";
-import nodejs from "../assets/stack/nodejs.svg";
 import pixijs from "../assets/stack/pixijs.svg";
 import react from "../assets/stack/react.svg";
 import reactrouter from "../assets/stack/reactrouter.svg";
@@ -29,20 +28,19 @@ const links = [
 ];
 
 const stack = [
-  { name: "HTML5", icon: html5 },
-  { name: "CSS3", icon: css },
-  { name: "Sass", icon: sass },
-  { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
+  { name: "JavaScript", icon: javascript },
   { name: "React", icon: react },
-  { name: "Next.js", icon: nextjs },
-  { name: "PixiJS", icon: pixijs },
+  { name: "Next.js", icon: nextjs, invert: true },
   { name: "React Router", icon: reactrouter },
+  { name: "PixiJS", icon: pixijs },
   { name: "Tailwind", icon: tailwind },
+  { name: "Sass", icon: sass },
   { name: "Redux", icon: redux },
   { name: "TanStack Query", icon: tanstack },
   { name: "GSAP", icon: gsap },
-  { name: "Node.js", icon: nodejs },
+  { name: "Material UI", icon: materialui },
+  { name: "Ant Design", icon: antdesign },
 ];
 
 function StackMarquee() {

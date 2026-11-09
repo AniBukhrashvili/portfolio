@@ -47,11 +47,11 @@ function CodeEditor() {
           {"}"}
         </pre>
       </div>
-      <p className="mt-2 text-[11px] font-medium text-ink/55">
-        <span className="text-accent">React.js</span>
+      {/* <p className="mt-2 text-[11px] font-medium text-ink/55">
+        React.js
         <span className="mx-1.5 text-ink/25">·</span>
         Next.js
-      </p>
+      </p> */}
     </div>
   );
 }
