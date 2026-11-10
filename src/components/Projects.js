@@ -61,7 +61,10 @@ function Projects() {
     <section id="projects" className="relative">
       <div className="container py-12 xl:py-18">
         <h2 className="text-xl font-light tracking-medium text-ink">
-          Selected work
+          Projects 
+          <span className="ml-1 text-sm font-light italic text-ink/50">
+            I've worked on
+          </span>
         </h2>
 
         <ul className="mt-1">

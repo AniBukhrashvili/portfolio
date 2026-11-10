@@ -52,18 +52,11 @@ const milestones = [
 
 function curveThrough(points) {
   if (points.length < 2) return "";
-  const clearance = 12;
-  const anchors = points.map((point, index) => {
-    if (index === 0) return point;
-    if (index === points.length - 1) return { x: point.x, y: point.y - clearance };
-    const towardInside = point.x >= points[index - 1].x ? -1 : 1;
-    return { x: point.x + towardInside * clearance, y: point.y };
-  });
 
-  let path = `M ${anchors[0].x} ${anchors[0].y}`;
-  for (let index = 0; index < anchors.length - 1; index += 1) {
-    const start = anchors[index];
-    const end = anchors[index + 1];
+  let path = `M ${points[0].x} ${points[0].y}`;
+  for (let index = 0; index < points.length - 1; index += 1) {
+    const start = points[index];
+    const end = points[index + 1];
     const distance = end.y - start.y;
     path += ` C ${start.x} ${start.y + distance * 0.55}, ${end.x} ${start.y + distance * 0.45}, ${end.x} ${end.y}`;
   }
@@ -130,9 +123,12 @@ function Beyond() {
       const wrapRect = wrap.getBoundingClientRect();
       const points = [...wrap.querySelectorAll("[data-timeline-dot]")].map((dot) => {
         const rect = dot.getBoundingClientRect();
+        const card = dot.closest("[data-timeline-card]");
+        const shiftX = card ? Number(gsap.getProperty(card, "x")) || 0 : 0;
+        const shiftY = card ? Number(gsap.getProperty(card, "y")) || 0 : 0;
         return {
-          x: rect.left + rect.width / 2 - wrapRect.left,
-          y: rect.top + rect.height / 2 - wrapRect.top,
+          x: rect.left + rect.width / 2 - wrapRect.left - shiftX,
+          y: rect.top + rect.height / 2 - wrapRect.top - shiftY,
         };
       });
       const d = curveThrough(points);
@@ -278,7 +274,7 @@ function Beyond() {
                           {item.text}
                         </p>
                         {item.photos && (
-                          <div className="mt-5 grid max-w-md grid-cols-5 gap-1.5">
+                          <div className="mt-5 grid max-w-md grid-cols-3 sm:grid-cols-5 gap-1.5">
                             {robotPhotos.map((photo, photoNumber) => (
                               <button
                                 key={photo.src}

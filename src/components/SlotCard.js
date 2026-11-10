@@ -76,7 +76,7 @@ function SlotCard() {
         </div>
           <div className="pointer-events-none absolute inset-x-0 top-1/3 h-px bg-ink/10" />
           <div className="pointer-events-none absolute inset-x-0 top-2/3 h-px bg-ink/10" />
-          <div className="pointer-events-none absolute inset-x-0 top-1/3 h-1/3 bg-accent/[0.08]" />
+          <div className="pointer-events-none absolute inset-x-0 top-1/3 h-1/3 bg-ink/5" />
         </div>
         <button
           type="button"

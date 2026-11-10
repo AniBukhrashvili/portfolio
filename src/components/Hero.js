@@ -45,7 +45,7 @@ const stack = [
 
 function StackMarquee() {
   return (
-    <div className="group flex h-full min-h-20 items-center overflow-hidden rounded-2xl border border-ink/10 bg-ink/5 [mask-image:linear-gradient(to_right,transparent,black_12%,black_90%,transparent)]">
+    <div className="group flex h-full min-h-20 items-center overflow-hidden rounded-2xl border border-ink/10 bg-ink/5 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       <div
         className="logo-marquee flex w-max"
         style={{ animationDuration: `${stack.length * 2.8}s` }}
@@ -96,20 +96,21 @@ function Hero() {
             <span className="block text-ink">Ani Bukhrashvili</span>
           </h1>
 
-          <div className="mt-7 flex flex-col gap-2 text-base font-medium text-accent sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-4 flex flex-col gap-2 text-lg font-medium text-accent sm:flex-row sm:items-center sm:gap-4">
             <span className="inline-flex items-center gap-1.5">
-              <span className="exp-pulse h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="exp-pulse h-2 w-2 rounded-full bg-accent" />
               Frontend Developer
             </span>
           </div>
 
-          <p className="mt-6 max-w-lg text-base font-light leading-7 text-ink/70">
-            I build modern, high-performance web experiences that combine clean UI, thoughtful UX and smooth interactions. 
-            With 4+ years of experience, I work across React, Next.js, TypeScript and PixiJS, developing everything from scalable web platforms and API integrations to interactive iGaming experiences.
-            <br />
-            <br />
-            At SmartSoft, I focus on game interfaces, animations and performance. Previously, at KLIPY and Artmedia, I built API-driven platforms and client-facing products across different industries.
-            I value clean, maintainable code, collaboration and turning complex ideas into intuitive experiences.
+          <p className="mt-4 max-w-lg text-base font-light leading-7 text-ink/70">
+            I'm a Frontend Developer with 4+ years of experience building responsive, interactive, and scalable applications. I work primarily with React, Next.js, TypeScript, and PixiJS, bringing ideas to life through clean interfaces, smooth interactions, and performance-focused solutions.
+            <br/>
+            <br/>
+            At SmartSoft, I develop interactive iGaming experiences, focusing on game interfaces, animations, and performance. Previously, at KLIPY and Artmedia, I worked on API-driven platforms and client-facing products across different industries, gaining experience in both frontend and full-stack development.
+            <br/>
+            <br/>
+            I enjoy solving complex problems, building maintainable solutions, and collaborating with teams to turn ideas into meaningful products.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-ink/80">
@@ -165,7 +166,7 @@ function Hero() {
             <SlotCard />
           </li>
           <li className="flex flex-col gap-1 justify-end rounded-2xl border border-ink/10 bg-ink/5 px-3 py-3 sm:col-span-3">
-            <p className="text-5xl font-semibold leading-none text-ink">4+</p>
+            <p className="text-4xl sm:text-5xl font-semibold leading-none text-ink">4+</p>
             <p className="mt-1.5 text-lg font-normal leading-tight text-ink/55">
               Years of experience
             </p>
